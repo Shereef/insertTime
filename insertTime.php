@@ -54,7 +54,7 @@
     function insertTime() {
         //process plugin
         $type = 'mysql';
-        $time = date('h:i:s A', current_time($type, $gmt = 0));
+        list($date, $time) = explode(' ', current_time($type, $gmt = 0));//$time = date('h:i:s A', current_time($type, $gmt = 0));
         $offset = get_option('gmt_offset');
         //send back text to calling function
         return '<label alt="at page loading time" class="insertTime currentTime">' . $time . ($offset > 0 ? ' GMT+' : ' GMT') . $offset . '</label>';
@@ -71,9 +71,9 @@
     function insertDateTime() {
         //process plugin
         $type = 'mysql';
-        $time = current_time($type, $gmt = 0);
+        $datetime = current_time($type, $gmt = 0);
         $offset = get_option('gmt_offset');
         //send back text to calling function
-        return '<label alt="at page loading time" class="insertTime currentDateTime">' . $time . ($offset > 0 ? ' GMT+' : ' GMT') . $offset . '</label>';
+        return '<label alt="at page loading time" class="insertTime currentDateTime">' . $datetime . ($offset > 0 ? ' GMT+' : ' GMT') . $offset . '</label>';
     }
 ?>
