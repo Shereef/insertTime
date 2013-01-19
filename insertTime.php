@@ -1,7 +1,7 @@
 <?php
     /*
      Plugin Name: Insert Time
-     Plugin URI: http://insertTime.toolsera.com
+     Plugin URI: https://github.com/Shereef/insertTime
      Description: Adds a shorcode [time] tp insert your local time at page loading in a post, just write [time], [datetime] or [date] in your post after activating this.
      Version: 1.0
      Author: Shereef Marzouk
